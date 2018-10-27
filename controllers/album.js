@@ -89,6 +89,23 @@ function updateAlbum(req, res){
 }
 
 
+function deleteAlbum(req, res){
+    let albumId=req.params.id;
+    
+    Album.findByIdAndRemove(albumId, (err, albumRemoved)=>{
+        if(err){
+            res.status(500).send({message: 'Error al borrar el album'});
+        }else{
+            if (!albumRemoved) {
+                res.status(404).send({message: 'No se ha borrado el album'});
+            } else {
+                res.status(200).send({album: albumRemoved});
+            }
+        }
+        
+    } );
+    
+}
 
 
 
@@ -97,5 +114,6 @@ module.exports = {
     getAlbum,
     getAlbums,
     saveAlbum,
-    updateAlbum
+    updateAlbum,
+    deleteAlbum
 };
