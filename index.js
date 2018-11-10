@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const app = require('./app');
 const port = process.env.PORT || 8081;
 
-mongoose.connect('mongodb://localhost:27017/apialbums',{ useNewUrlParser: true,useCreateIndex: true }, (err,res)=>{
+mongoose.connect('mongodb://localhost:27017/albums',{ useNewUrlParser: true,useCreateIndex: true }, (err,res)=>{
     
     if(err){
         throw err;
@@ -14,6 +14,8 @@ mongoose.connect('mongodb://localhost:27017/apialbums',{ useNewUrlParser: true,u
         app.listen(port, ()=>{
             console.log('ApiAlbums online... ');
         });
+        
     }
     
+
 });

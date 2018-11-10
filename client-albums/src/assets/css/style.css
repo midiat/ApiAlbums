@@ -23,7 +23,7 @@ body{
 
 header{
 	padding: 15px;
-	background: #229138;
+	background: #E74A30;
 }
 
 header .title-subtitle{
@@ -62,7 +62,7 @@ header #logo{
     width: 65px;
 }
 
-.btn-add-favorito{
+.btn-add-album{
 	display: block;
 	padding: 10px;
 	float: right;
@@ -77,42 +77,47 @@ header #logo{
 	transition: all 300ms;
 }
 
-.btn-add-favorito:hover{
+.btn-add-album:hover{
 	background: white;
 	color: #444;
 }
 
-#favoritos-list{
+.main{
+    padding: 20px;
+}
+
+#albums-list{
 	padding: 0px;
 	margin: 0px;
 }
 
-.favorito-item{
+.album-item{
 	list-style: none;
 	border: 1px solid #ddd;
 	float: left;
-	width: 31%;
+	width: 95%;
 	height: 120px;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
+    padding-left: 20px;
 	color: gray;
 	background: white;
 	margin: 10px;
 }
 
-.favorito-item .content-data{
+.album-item .content-data{
 	float: left;
 	margin-left: 20px;
 }
 
-.favorito-item h4{
+.album-item h4{
 	color: #444;
 	margin: 0px;
 	padding: 0px;
 	margin-top: 5px;
 }
 
-.favorito-item .url{
+.album-item .url{
 	margin: 0px;
 	margin-top: 2px;
 	padding: 0px;
@@ -147,11 +152,9 @@ header #logo{
 .btn-default{
 	background: #eaa615;
 	border-color: #cc941c;
-	color: white;	
-	margin-left: 0px;
 }
 
-.favorito-box{
+.album-box{
 	margin-left: 25px;
 	background: white;
 
@@ -173,10 +176,12 @@ footer{
 	color: gray;
 }
 
-.seguro{
+.seguro {
     background: white none repeat scroll 0 0;
-    margin-top: -95px;
+    margin-top: -41px;
     position: absolute;
-    width: 275px;
-    text-align: center;
+    width: 333px;
+    text-align: left;
+    height: 45px;
+    padding-top: 10px;
 }

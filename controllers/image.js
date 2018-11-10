@@ -166,7 +166,7 @@ function getImageFile(req, res){
            res.status(200).send({message: 'No existe la imagen'}); 
         }
     });
-    res.status(200).send({message: 'No ha subido ninguna imagen!'}); 
+    res.status(200).send(); 
     
 }
 
