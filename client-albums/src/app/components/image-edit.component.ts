@@ -68,19 +68,27 @@ export class ImageEditComponent implements OnInit{
                     if(!response.image){
                         alert("Error en el servidor");
                     }else{
-                        //Subir la imagen
-                        this.makeFileRequest(GLOBAL.url+'upload-image/'+id, [], this.filesToUpload).then(
-                            (result) =>{
-                                this.resultUpload = result;
-                                this.image.picture = this.resultUpload.filename;
-                            },
-                            (error) => {
-                                console.log(error);
-                            }
-                        );
+                        
+                        if(!this.filesToUpload){
+                            this._router.navigate(['/album', this.image.album]);
+                        }else{
+                        
+                            //Subir la imagen
+                            this.makeFileRequest(GLOBAL.url+'upload-image/'+id, [], this.filesToUpload).then(
+                                (result) =>{
+                                    this.resultUpload = result;
+                                    this.image.picture = this.resultUpload.filename;
+                                    this._router.navigate(['/album', this.image.album]);
+
+                                },
+                                (error) => {
+                                    console.log(error);
+                                }
+                            );
+                        }
                     }
                     
-                    this._router.navigate(['/album', this.image.album]);
+                    
                 },
                 error => {
                     this.errorMessage = <any>error;

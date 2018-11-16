@@ -154,7 +154,7 @@ header #logo{
 	border-color: #cc941c;
 }
 
-.album-box{
+.album-box, .image-box{
 	margin-left: 25px;
 	background: white;
 
@@ -165,6 +165,9 @@ header #logo{
 	padding: 20px;
 }
 
+.image-box .imagen{
+    width: 100%;
+}
 .loading{
 	margin:25px;
 }
@@ -184,4 +187,39 @@ footer{
     text-align: left;
     height: 45px;
     padding-top: 10px;
+}
+
+
+#pictures-list .image-item{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    height: 200px;
+    width: 240px;
+    list-style: none;
+    border: 1px solid #cccc;
+}
+
+#pictures-list .image-item .picture{
+    height: 150px;
+    overflow: hidden;
+}
+
+#pictures-list .image-item img{
+    width: 100%;
+}
+
+#pictures-list .image-item .title{
+    width: 100%;
+    height: 50px;
+    display: block;
+    background: #eee;
+    text-align: center;
+    color: #444;
+    line-height: 50px;
+}
+
+#pictures-list .image-item .title a{
+    text-decoration: none;
+    color: #444;
 }
